@@ -15,13 +15,11 @@ public class Program {
 		lista.add(new Produto("Mouse",50.00));
 		lista.add(new Produto("Tablet",350.50));
 		lista.add(new Produto("HD Case",80.90));
+	
+		double min = 100.0;		
 		
-		//utilizando lambda declarada
-		double min = 100.0;
-		
-		Predicate<Produto> pred = p-> p .getPreco() >= min;
-		
-		lista.removeIf(pred);
+		//utilizando lambda inline	
+		lista.removeIf(p-> p .getPreco() >= min);
 							
 	
 		 
