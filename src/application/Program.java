@@ -17,7 +17,9 @@ public class Program {
 		lista.add(new Produto("HD Case",80.90));
 		
 		//utilizando lambda declarada
-		Predicate<Produto> pred = p-> p .getPreco() >= 100.0;
+		double min = 100.0;
+		
+		Predicate<Produto> pred = p-> p .getPreco() >= min;
 		
 		lista.removeIf(pred);
 							
