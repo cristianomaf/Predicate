@@ -18,7 +18,7 @@ public class Program {
 		
 		//remove da lista produtos com preco acima de 100
 		//utilizando referencia para um metodo da classe produto
-		lista.removeIf(Produto::staticProdutoPredicate);
+		lista.removeIf(Produto::nonStaticProdutoPredicate);
 							//referencia para metodo
 		//percorre a lista imprimindo produtos
 		for(Produto p: lista) {

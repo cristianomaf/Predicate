@@ -25,9 +25,17 @@ public class Produto {
 		this.preco = preco;
 	}
 	
-	//utilizando metodo static
+	//utilizando metodo static que recebe produto como argumento
 	public static boolean staticProdutoPredicate(Produto p) {
 		return p.getPreco() >=100;
+	}
+	
+	//criando metodo nao static que faz a mesma coisa 
+	//diferenca que metodo nao estatico utiliza como referencia
+	// o proprio objeto produto aqui da classe 
+	
+	public boolean nonStaticProdutoPredicate() {
+		return preco >=100; //pega o preco direto da classe
 	}
 
 	@Override
