@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Produto;
+import util.ProdutoPredicate;
 
 public class Program {
 
@@ -16,7 +17,7 @@ public class Program {
 		lista.add(new Produto("HD Case",80.90));
 		
 		//remove da lista produtos com preco acima de 100
-		lista.removeIf(p->p.getPreco()>=100);
+		lista.removeIf(new ProdutoPredicate());
 		
 		//percorre a lista imprimindo produtos
 		for(Produto p: lista) {
