@@ -2,9 +2,9 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import entities.Produto;
-import util.ProdutoPredicate;
 
 public class Program {
 
@@ -16,10 +16,13 @@ public class Program {
 		lista.add(new Produto("Tablet",350.50));
 		lista.add(new Produto("HD Case",80.90));
 		
-		//remove da lista produtos com preco acima de 100
-		//utilizando referencia para um metodo da classe produto
-		lista.removeIf(Produto::nonStaticProdutoPredicate);
-							//referencia para metodo
+		//utilizando lambda declarada
+		Predicate<Produto> pred = p-> p .getPreco() >= 100.0;
+		
+		lista.removeIf(pred);
+							
+	
+		 
 		//percorre a lista imprimindo produtos
 		for(Produto p: lista) {
 			System.out.println(p);
