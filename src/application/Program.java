@@ -17,8 +17,9 @@ public class Program {
 		lista.add(new Produto("HD Case",80.90));
 		
 		//remove da lista produtos com preco acima de 100
-		lista.removeIf(new ProdutoPredicate());
-		
+		//utilizando referencia para um metodo da classe produto
+		lista.removeIf(Produto::staticProdutoPredicate);
+							//referencia para metodo
 		//percorre a lista imprimindo produtos
 		for(Produto p: lista) {
 			System.out.println(p);

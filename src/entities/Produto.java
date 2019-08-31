@@ -24,6 +24,11 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	//utilizando metodo static
+	public static boolean staticProdutoPredicate(Produto p) {
+		return p.getPreco() >=100;
+	}
 
 	@Override
 	public String toString() {
